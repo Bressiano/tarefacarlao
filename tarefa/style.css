@@ -1,0 +1,70 @@
+/* Estilo base */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    transform-origin: top left; /* Para garantir que o zoom seja uniforme */
+}
+
+/* Barra de Acessibilidade */
+.accessibility-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.accessibility-bar button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accessibility-bar button:hover {
+    background-color: #ddd;
+}
+
+/* Modo Claro */
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Modo Escuro */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Zoom */
+.zoom {
+    transform: scale(1);
+}
+
+/* Espaço principal */
+main {
+    padding: 20px;
+    margin-top: 50px; /* Para evitar sobreposição da barra de ferramentas */
+}
+
+/* estilos.css */
+#vlibrasContainer {
+    display: block; /* Widget visível por padrão */
+}
+
+.brilho, .zoom, .seta, .menos{
+    height: 1.1rem;
+}
+
+img{
+    padding: 0.2rem;
+}

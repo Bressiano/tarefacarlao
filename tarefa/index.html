@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Acessibilidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode"> <!-- Começa no modo claro -->
+    <div class="accessibility-bar">
+        <button id="toggle-theme"><img class="brilho" src="img/brilho.png" alt="icon brilho"> Modo Claro/Escuro</button>
+        <button id="zoom-in"> <img class="zoom" src="img/zoom.png" alt="icon zoom">Aumentar Tela</button>
+        <button id="zoom-out"><img class="menos" src="img/menos.png" alt="icon brilho">Diminuir Tela</button>
+        <button id="reset-zoom"><img class="seta" src="img/seta.png" alt="icon brilho">Redefinir Zoom</button>
+    
+    </div>
+
+    <main>
+        <h1>Exemplo de Página com Barra de Acessibilidade</h1>
+        <p>Este é um exemplo de conteúdo para testar a barra de acessibilidade. Use os botões acima para alternar temas.</p>
+    </main>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> 
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        // Função para alternar a visibilidade do widget
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var vlibrasContainer = document.getElementById('vlibrasContainer');
+            
+            if (vlibrasContainer.style.display === 'none' || vlibrasContainer.style.display === '') {
+                vlibrasContainer.style.display = 'block';
+                this.textContent = 'Ocultar Interpretação';
+            } else {
+                vlibrasContainer.style.display = 'none';
+                this.textContent = 'Mostrar Interpretação';
+            }
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
